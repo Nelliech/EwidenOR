@@ -47,21 +47,21 @@
             // 
             // powrot_wyswietl
             // 
-            this.powrot_wyswietl.Location = new System.Drawing.Point(455, 473);
+            this.powrot_wyswietl.Location = new System.Drawing.Point(876, 459);
             this.powrot_wyswietl.Name = "powrot_wyswietl";
-            this.powrot_wyswietl.Size = new System.Drawing.Size(95, 24);
+            this.powrot_wyswietl.Size = new System.Drawing.Size(121, 38);
             this.powrot_wyswietl.TabIndex = 2;
-            this.powrot_wyswietl.Text = "button2";
+            this.powrot_wyswietl.Text = "Powrót";
             this.powrot_wyswietl.UseVisualStyleBackColor = true;
             this.powrot_wyswietl.Click += new System.EventHandler(this.powrot_wyswietl_Click);
             // 
             // druk
             // 
-            this.druk.Location = new System.Drawing.Point(638, 473);
+            this.druk.Location = new System.Drawing.Point(430, 459);
             this.druk.Name = "druk";
-            this.druk.Size = new System.Drawing.Size(75, 23);
+            this.druk.Size = new System.Drawing.Size(148, 45);
             this.druk.TabIndex = 3;
-            this.druk.Text = "druk";
+            this.druk.Text = "Konwertuj do PDF\'a";
             this.druk.UseVisualStyleBackColor = true;
             this.druk.Click += new System.EventHandler(this.druk_Click);
             // 
@@ -74,7 +74,7 @@
             this.Controls.Add(this.powrot_wyswietl);
             this.Controls.Add(this.ArkuszDanych);
             this.Name = "wyswietl_zabieg";
-            this.Text = "Form1";
+            this.Text = "EwidenOR";
             this.Load += new System.EventHandler(this.wyswietl_zabieg_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ArkuszDanych)).EndInit();
             this.ResumeLayout(false);

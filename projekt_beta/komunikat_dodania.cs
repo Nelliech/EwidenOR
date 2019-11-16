@@ -19,8 +19,10 @@ namespace projekt_beta
 
         private void powrot_z_dodania_Click(object sender, EventArgs e)
         {
-            
-           
+            Start st = new Start();
+            st.Show();
+            this.Hide();
+
 
         }
 
