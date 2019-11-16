@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Microsoft.Office.Interop;
 namespace projekt_beta
 {
     public partial class Start : Form
@@ -38,5 +40,18 @@ namespace projekt_beta
             wz.Show();
             this.Hide();
         }
+
+        private void import_excel_Click(object sender, EventArgs e)
+        {
+            /*
+            saveFileDialog1.ShowDialog();
+            string path = saveFileDialog1.FileName;
+            File.WriteAllText(path,)
+            */
+           
+
+        }
+       
+
     }
 }

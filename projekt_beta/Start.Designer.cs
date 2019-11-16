@@ -31,6 +31,7 @@
             this.historia_ewidencji = new System.Windows.Forms.Button();
             this.dodaj_ewidencje = new System.Windows.Forms.Button();
             this.import_excel = new System.Windows.Forms.Button();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // historia_ewidencji
@@ -61,6 +62,7 @@
             this.import_excel.TabIndex = 2;
             this.import_excel.Text = "Importuj do Excel\'a";
             this.import_excel.UseVisualStyleBackColor = true;
+            this.import_excel.Click += new System.EventHandler(this.import_excel_Click);
             // 
             // Start
             // 
@@ -83,5 +85,6 @@
         private System.Windows.Forms.Button historia_ewidencji;
         private System.Windows.Forms.Button dodaj_ewidencje;
         private System.Windows.Forms.Button import_excel;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

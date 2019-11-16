@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +54,12 @@
     </Compile>
     <Compile Include="dodaj_zabieg.Designer.cs">
       <DependentUpon>dodaj_zabieg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="do_excel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="do_excel.Designer.cs">
+      <DependentUpon>do_excel.cs</DependentUpon>
     </Compile>
     <Compile Include="Start.cs">
       <SubType>Form</SubType>
@@ -75,6 +84,9 @@
     <EmbeddedResource Include="dodaj_zabieg.resx">
       <DependentUpon>dodaj_zabieg.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="do_excel.resx">
+      <DependentUpon>do_excel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Start.resx">
       <DependentUpon>Start.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +105,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

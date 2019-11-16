@@ -30,11 +30,15 @@
         {
             this.ArkuszDanych = new System.Windows.Forms.DataGridView();
             this.powrot_wyswietl = new System.Windows.Forms.Button();
+            this.druk = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ArkuszDanych)).BeginInit();
             this.SuspendLayout();
             // 
             // ArkuszDanych
             // 
+            this.ArkuszDanych.AllowUserToAddRows = false;
+            this.ArkuszDanych.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ArkuszDanych.BackgroundColor = System.Drawing.Color.White;
             this.ArkuszDanych.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ArkuszDanych.Location = new System.Drawing.Point(12, 12);
             this.ArkuszDanych.Name = "ArkuszDanych";
@@ -51,11 +55,22 @@
             this.powrot_wyswietl.UseVisualStyleBackColor = true;
             this.powrot_wyswietl.Click += new System.EventHandler(this.powrot_wyswietl_Click);
             // 
+            // druk
+            // 
+            this.druk.Location = new System.Drawing.Point(638, 473);
+            this.druk.Name = "druk";
+            this.druk.Size = new System.Drawing.Size(75, 23);
+            this.druk.TabIndex = 3;
+            this.druk.Text = "druk";
+            this.druk.UseVisualStyleBackColor = true;
+            this.druk.Click += new System.EventHandler(this.druk_Click);
+            // 
             // wyswietl_zabieg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 509);
+            this.Controls.Add(this.druk);
             this.Controls.Add(this.powrot_wyswietl);
             this.Controls.Add(this.ArkuszDanych);
             this.Name = "wyswietl_zabieg";
@@ -69,5 +84,6 @@
         #endregion
         private System.Windows.Forms.DataGridView ArkuszDanych;
         private System.Windows.Forms.Button powrot_wyswietl;
+        private System.Windows.Forms.Button druk;
     }
 }
