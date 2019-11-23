@@ -11,7 +11,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data;
+using MySql.Data.MySqlClient;
+using System.Configuration;
 
 
 namespace projekt_beta
@@ -21,13 +23,40 @@ namespace projekt_beta
         public wyswietl_zabieg()
         {
             InitializeComponent();
-
+            /*
             string sciezka = null;
             sciezka = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=EwidenOR1.accdb;";
             string format = Path.GetExtension(sciezka);
             ImportDanychAccess(sciezka, format, true);
-            this.Show();
+            */
+           // this.Show();
+          
         }
+        private void wyswietl_zabieg_Load(object sender, EventArgs e)
+        {
+            ArkuszDanych.DataSource = GetEmployeesList();
+        }
+        private DataTable GetEmployeesList()
+        {
+            DataTable dtEmployees = new DataTable(); //server=sql7.freemysqlhosting.net;user id=sql7313253;persistsecurityinfo=True;database=sql7313253
+            string connString = "Server=sql7.freemysqlhosting.net;Database=sql7313253; Uid=sql7313253;Pwd=QtM4himqbd";
+
+            using (MySqlConnection con = new MySqlConnection(connString))
+            {
+                using (MySqlCommand cmd = new MySqlCommand("Select data_zabiegu,roslina,powierzchnia,nazwa,dawka,jednostka,przyczyna_stosowania,uwaga From Ewidencja", con))
+                {
+                    con.Open();
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    dtEmployees.Load(reader);
+                }
+
+            }
+
+                return dtEmployees;
+        }
+        /*
         DataTable ImportTabeleAccess(string ścieżka, string format)
         {
             string sciezka = null;
@@ -62,15 +91,14 @@ namespace projekt_beta
             connect.Close();
 
         }
+        */
+
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void wyswietl_zabieg_Load(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void powrot_wyswietl_Click(object sender, EventArgs e)
         {
