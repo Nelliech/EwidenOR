@@ -43,7 +43,8 @@ namespace projekt_beta
 
             using (MySqlConnection con = new MySqlConnection(connString))
             {
-                using (MySqlCommand cmd = new MySqlCommand("Select data_zabiegu,roslina,powierzchnia,nazwa,dawka,jednostka,przyczyna_stosowania,uwaga From Ewidencja", con))
+                using (MySqlCommand cmd = new MySqlCommand("Select data_zabiegu,roslina,powierzchnia,nazwa,dawka,jednostka,przyczyna_stosowania,uwaga From Ewidencja " +
+                    "Where id_uzytkownicy='" + Program.EmployeeName + "'", con))
                 {
                     con.Open();
 
@@ -52,7 +53,7 @@ namespace projekt_beta
                     dtEmployees.Load(reader);
                 }
 
-            }
+            } 
 
                 return dtEmployees;
         }

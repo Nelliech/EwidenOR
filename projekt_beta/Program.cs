@@ -8,6 +8,7 @@ namespace projekt_beta
 {
     static class Program
     {
+        public static string EmployeeName;
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
         /// </summary>
@@ -16,8 +17,8 @@ namespace projekt_beta
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Start());
-           
+            Application.Run(new logowanie());
+            
         }
     }
 }

@@ -80,6 +80,12 @@
     <Compile Include="do_excel.Designer.cs">
       <DependentUpon>do_excel.cs</DependentUpon>
     </Compile>
+    <Compile Include="logowanie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="logowanie.Designer.cs">
+      <DependentUpon>logowanie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Start.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="do_excel.resx">
       <DependentUpon>do_excel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logowanie.resx">
+      <DependentUpon>logowanie.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Start.resx">
       <DependentUpon>Start.cs</DependentUpon>
