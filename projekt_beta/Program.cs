@@ -8,7 +8,7 @@ namespace projekt_beta
 {
     static class Program
     {
-        public static string EmployeeName;
+        public static string EmployeeName="";
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
         /// </summary>

@@ -12,56 +12,42 @@ using MySql.Data.MySqlClient;
 
 namespace projekt_beta
 {
-    public partial class logowanie : Form
+    public partial class rejestracja : Form
     {
-        public logowanie()
+        public rejestracja()
         {
             InitializeComponent();
-            
-            password_text.Text = "";
-            password_text.PasswordChar = '*';         
-            password_text.MaxLength = 8;
-            
         }
 
-        private void zaloguj_button_Click(object sender, EventArgs e)
+        private void rejestracja_button_Click(object sender, EventArgs e)
         {
-
             string connString = "Server=sql7.freemysqlhosting.net;Database=sql7313253; Uid=sql7313253;Pwd=QtM4himqbd";
             MySqlConnection connection = new MySqlConnection(connString);
-            string insertQuery = "SELECT id FROM uzytkownicy WHERE login= '" + login_text.Text  + "' AND haslo= '" + password_text.Text + "';";
-                
+            string insertQuery = "SELECT id FROM uzytkownicy WHERE login= '" + login__text_rejestracja.Text +"';";
 
-              
+
+
             MySqlConnection conDataBase = new MySqlConnection(connString);
             MySqlCommand command = new MySqlCommand(insertQuery, conDataBase);
-            
-            
+
+
             try
             {
                 conDataBase.Open();
                 Program.EmployeeName = command.ExecuteScalar().ToString();
                 MessageBox.Show(Program.EmployeeName);
-                if (string.IsNullOrEmpty(Program.EmployeeName))
+                if (!string.IsNullOrEmpty(Program.EmployeeName))
                 {
-                    connection.Close();
-                    insertQuery = "SELECT id FROM uzytkownicy WHERE login= '" + login_text.Text + "' AND haslo= '" + password_text.Text + "';";
-
-                    MySqlCommand command2 = new MySqlCommand(insertQuery, conDataBase);
-
-
-                    Start st = new Start();
-                    st.Show();
-                    this.Hide();
-
+                   
 
                 }
-               
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
 
 
         }
