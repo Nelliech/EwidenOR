@@ -31,6 +31,7 @@
             this.login_text = new System.Windows.Forms.TextBox();
             this.password_text = new System.Windows.Forms.TextBox();
             this.zaloguj_button = new System.Windows.Forms.Button();
+            this.zalozkonto_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // login_text
@@ -49,7 +50,7 @@
             // 
             // zaloguj_button
             // 
-            this.zaloguj_button.Location = new System.Drawing.Point(306, 128);
+            this.zaloguj_button.Location = new System.Drawing.Point(249, 127);
             this.zaloguj_button.Name = "zaloguj_button";
             this.zaloguj_button.Size = new System.Drawing.Size(87, 31);
             this.zaloguj_button.TabIndex = 2;
@@ -57,11 +58,22 @@
             this.zaloguj_button.UseVisualStyleBackColor = true;
             this.zaloguj_button.Click += new System.EventHandler(this.zaloguj_button_Click);
             // 
+            // zalozkonto_button
+            // 
+            this.zalozkonto_button.Location = new System.Drawing.Point(380, 131);
+            this.zalozkonto_button.Name = "zalozkonto_button";
+            this.zalozkonto_button.Size = new System.Drawing.Size(75, 23);
+            this.zalozkonto_button.TabIndex = 3;
+            this.zalozkonto_button.Text = "Załóż Konto";
+            this.zalozkonto_button.UseVisualStyleBackColor = true;
+            this.zalozkonto_button.Click += new System.EventHandler(this.zalozkonto_button_Click);
+            // 
             // logowanie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 284);
+            this.Controls.Add(this.zalozkonto_button);
             this.Controls.Add(this.zaloguj_button);
             this.Controls.Add(this.password_text);
             this.Controls.Add(this.login_text);
@@ -77,5 +89,6 @@
         private System.Windows.Forms.TextBox login_text;
         private System.Windows.Forms.TextBox password_text;
         private System.Windows.Forms.Button zaloguj_button;
+        private System.Windows.Forms.Button zalozkonto_button;
     }
 }

@@ -29,7 +29,7 @@ namespace projekt_beta
 
             string connString = "Server=sql7.freemysqlhosting.net;Database=sql7313253; Uid=sql7313253;Pwd=QtM4himqbd";
             MySqlConnection connection = new MySqlConnection(connString);
-            string insertQuery = "SELECT id FROM uzytkownicy WHERE login= '" + login_text.Text  + "' AND haslo= '" + password_text.Text + "';";
+            string insertQuery = "SELECT id FROM uzytkownicy WHERE BINARY login= '" + login_text.Text  + "' AND BINARY haslo= '" + password_text.Text + "';";
                 
 
               
@@ -42,13 +42,11 @@ namespace projekt_beta
                 conDataBase.Open();
                 Program.EmployeeName = command.ExecuteScalar().ToString();
                 MessageBox.Show(Program.EmployeeName);
-                if (string.IsNullOrEmpty(Program.EmployeeName))
+                if (!string.IsNullOrEmpty(Program.EmployeeName))
                 {
                     connection.Close();
-                    insertQuery = "SELECT id FROM uzytkownicy WHERE login= '" + login_text.Text + "' AND haslo= '" + password_text.Text + "';";
 
-                    MySqlCommand command2 = new MySqlCommand(insertQuery, conDataBase);
-
+                    MessageBox.Show("good");
 
                     Start st = new Start();
                     st.Show();
@@ -63,6 +61,14 @@ namespace projekt_beta
                 MessageBox.Show(ex.Message);
             }
 
+
+        }
+
+        private void zalozkonto_button_Click(object sender, EventArgs e)
+        {
+            rejestracja st = new rejestracja();
+            st.Show();
+            this.Hide();
 
         }
     }
