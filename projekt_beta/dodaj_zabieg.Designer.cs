@@ -108,7 +108,6 @@
             this.label3.Size = new System.Drawing.Size(206, 13);
             this.label3.TabIndex = 18;
             this.label3.Text = "Powierzchnia, na której wykonano zabieg ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 

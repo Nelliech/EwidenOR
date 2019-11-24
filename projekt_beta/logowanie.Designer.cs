@@ -32,25 +32,26 @@
             this.password_text = new System.Windows.Forms.TextBox();
             this.zaloguj_button = new System.Windows.Forms.Button();
             this.zalozkonto_button = new System.Windows.Forms.Button();
+            this.wiadomosc_logowania = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // login_text
             // 
-            this.login_text.Location = new System.Drawing.Point(306, 41);
+            this.login_text.Location = new System.Drawing.Point(282, 41);
             this.login_text.Name = "login_text";
-            this.login_text.Size = new System.Drawing.Size(100, 20);
+            this.login_text.Size = new System.Drawing.Size(149, 20);
             this.login_text.TabIndex = 0;
             // 
             // password_text
             // 
-            this.password_text.Location = new System.Drawing.Point(306, 79);
+            this.password_text.Location = new System.Drawing.Point(282, 79);
             this.password_text.Name = "password_text";
-            this.password_text.Size = new System.Drawing.Size(100, 20);
+            this.password_text.Size = new System.Drawing.Size(149, 20);
             this.password_text.TabIndex = 1;
             // 
             // zaloguj_button
             // 
-            this.zaloguj_button.Location = new System.Drawing.Point(249, 127);
+            this.zaloguj_button.Location = new System.Drawing.Point(375, 118);
             this.zaloguj_button.Name = "zaloguj_button";
             this.zaloguj_button.Size = new System.Drawing.Size(87, 31);
             this.zaloguj_button.TabIndex = 2;
@@ -60,19 +61,30 @@
             // 
             // zalozkonto_button
             // 
-            this.zalozkonto_button.Location = new System.Drawing.Point(380, 131);
+            this.zalozkonto_button.Location = new System.Drawing.Point(251, 118);
             this.zalozkonto_button.Name = "zalozkonto_button";
-            this.zalozkonto_button.Size = new System.Drawing.Size(75, 23);
+            this.zalozkonto_button.Size = new System.Drawing.Size(87, 31);
             this.zalozkonto_button.TabIndex = 3;
             this.zalozkonto_button.Text = "Załóż Konto";
             this.zalozkonto_button.UseVisualStyleBackColor = true;
             this.zalozkonto_button.Click += new System.EventHandler(this.zalozkonto_button_Click);
+            // 
+            // wiadomosc_logowania
+            // 
+            this.wiadomosc_logowania.AutoSize = true;
+            this.wiadomosc_logowania.ForeColor = System.Drawing.Color.Red;
+            this.wiadomosc_logowania.Location = new System.Drawing.Point(306, 102);
+            this.wiadomosc_logowania.Name = "wiadomosc_logowania";
+            this.wiadomosc_logowania.Size = new System.Drawing.Size(100, 13);
+            this.wiadomosc_logowania.TabIndex = 4;
+            this.wiadomosc_logowania.Text = "Niepoprawne dane!";
             // 
             // logowanie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 284);
+            this.Controls.Add(this.wiadomosc_logowania);
             this.Controls.Add(this.zalozkonto_button);
             this.Controls.Add(this.zaloguj_button);
             this.Controls.Add(this.password_text);
@@ -90,5 +102,6 @@
         private System.Windows.Forms.TextBox password_text;
         private System.Windows.Forms.Button zaloguj_button;
         private System.Windows.Forms.Button zalozkonto_button;
+        private System.Windows.Forms.Label wiadomosc_logowania;
     }
 }

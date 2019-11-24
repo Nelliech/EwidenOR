@@ -40,6 +40,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.rejestracja_button = new System.Windows.Forms.Button();
             this.label_alert = new System.Windows.Forms.Label();
+            this.label_alert_pass = new System.Windows.Forms.Label();
+            this.label_alert_login = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // imie_text_rejestracja
@@ -62,6 +64,7 @@
             this.login_text_rejestracja.Name = "login_text_rejestracja";
             this.login_text_rejestracja.Size = new System.Drawing.Size(100, 20);
             this.login_text_rejestracja.TabIndex = 2;
+            this.login_text_rejestracja.Click += new System.EventHandler(this.login_text_rejestracja_Click);
             // 
             // pass_text_rejestracja
             // 
@@ -69,6 +72,7 @@
             this.pass_text_rejestracja.Name = "pass_text_rejestracja";
             this.pass_text_rejestracja.Size = new System.Drawing.Size(100, 20);
             this.pass_text_rejestracja.TabIndex = 3;
+            this.pass_text_rejestracja.Click += new System.EventHandler(this.pass_text_rejestracja_Click);
             // 
             // passre_text_rejestracja
             // 
@@ -100,9 +104,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(203, 138);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(64, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Login*";
+            this.label3.Text = "Login(4-16)*";
             // 
             // label4
             // 
@@ -135,18 +139,40 @@
             // label_alert
             // 
             this.label_alert.AutoSize = true;
-            this.label_alert.ForeColor = System.Drawing.Color.Red;
+            this.label_alert.ForeColor = System.Drawing.Color.DarkRed;
             this.label_alert.Location = new System.Drawing.Point(314, 217);
             this.label_alert.Name = "label_alert";
             this.label_alert.Size = new System.Drawing.Size(129, 13);
             this.label_alert.TabIndex = 11;
             this.label_alert.Text = "Uzupełnij wymagane pola";
             // 
+            // label_alert_pass
+            // 
+            this.label_alert_pass.AutoSize = true;
+            this.label_alert_pass.ForeColor = System.Drawing.Color.DarkRed;
+            this.label_alert_pass.Location = new System.Drawing.Point(420, 171);
+            this.label_alert_pass.Name = "label_alert_pass";
+            this.label_alert_pass.Size = new System.Drawing.Size(142, 13);
+            this.label_alert_pass.TabIndex = 12;
+            this.label_alert_pass.Text = "Niepoprawna długość hasła";
+            // 
+            // label_alert_login
+            // 
+            this.label_alert_login.AutoSize = true;
+            this.label_alert_login.ForeColor = System.Drawing.Color.DarkRed;
+            this.label_alert_login.Location = new System.Drawing.Point(421, 138);
+            this.label_alert_login.Name = "label_alert_login";
+            this.label_alert_login.Size = new System.Drawing.Size(107, 13);
+            this.label_alert_login.TabIndex = 13;
+            this.label_alert_login.Text = "Taki login już istnieje!";
+            // 
             // rejestracja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label_alert_login);
+            this.Controls.Add(this.label_alert_pass);
             this.Controls.Add(this.label_alert);
             this.Controls.Add(this.rejestracja_button);
             this.Controls.Add(this.label5);
@@ -180,5 +206,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button rejestracja_button;
         private System.Windows.Forms.Label label_alert;
+        private System.Windows.Forms.Label label_alert_pass;
+        private System.Windows.Forms.Label label_alert_login;
     }
 }

@@ -21,7 +21,7 @@ namespace projekt_beta
             password_text.Text = "";
             password_text.PasswordChar = '*';         
             password_text.MaxLength = 8;
-            
+            wiadomosc_logowania.Hide();
         }
 
         private void zaloguj_button_Click(object sender, EventArgs e)
@@ -36,22 +36,28 @@ namespace projekt_beta
             MySqlConnection conDataBase = new MySqlConnection(connString);
             MySqlCommand command = new MySqlCommand(insertQuery, conDataBase);
             
-            
+
             try
             {
                 conDataBase.Open();
-                Program.EmployeeName = command.ExecuteScalar().ToString();
-                MessageBox.Show(Program.EmployeeName);
-                if (!string.IsNullOrEmpty(Program.EmployeeName))
+               
+                //MessageBox.Show(Program.EmployeeName);
+                if (command.ExecuteScalar() != null)
                 {
                     connection.Close();
 
-                    MessageBox.Show("good");
-
+                    MessageBox.Show("Udało się zalogować");
+                    Program.EmployeeName = command.ExecuteScalar().ToString(); // Przypisanie numeru id do zminnej EmployeeName pozwala określić kto jest zalogowany
                     Start st = new Start();
                     st.Show();
                     this.Hide();
 
+
+                }
+                else
+                {
+
+                    wiadomosc_logowania.Show();
 
                 }
                

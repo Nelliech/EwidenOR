@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Data;
-using System.Data.OleDb;
+//using System.Data;
+//using System.Data.OleDb;
 using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
@@ -25,7 +25,6 @@ namespace projekt_beta
        
         private void dodaj_Click(object sender, EventArgs e)
         {
-            
 
              string data = data_zabieg.Value.ToString("yyyy-MM-dd");
              string roslina = roslina_zabieg.Text;
@@ -76,7 +75,7 @@ namespace projekt_beta
             string connString = "Server=sql7.freemysqlhosting.net;Database=sql7313253; Uid=sql7313253;Pwd=QtM4himqbd";
             MySqlConnection connection = new MySqlConnection(connString);
             string insertQuery = "INSERT INTO Ewidencja(id_uzytkownicy,data_zabiegu,roslina,powierzchnia,nazwa,dawka,jednostka,przyczyna_stosowania,uwaga) VALUES(" +
-                "'"+1+
+                "'"+Program.EmployeeName+
                 "','"+data+
                 "','"+roslina+
                 "','"+powierzchnia+
@@ -89,13 +88,17 @@ namespace projekt_beta
             MySqlConnection conDataBase = new MySqlConnection(connString);
             MySqlCommand command = new MySqlCommand(insertQuery, conDataBase);
             MySqlDataReader myreader;
-           
-            
+              
             try
             {
                 conDataBase.Open();
                 myreader = command.ExecuteReader();
-                //MessageBox.Show("udalo sie");
+                connection.Close();
+                MessageBox.Show("Ewidencja została dodana!");
+                Start m = new Start();
+                m.Show();
+                this.Hide();
+                
                 while (myreader.Read())
                 {
 
@@ -105,22 +108,8 @@ namespace projekt_beta
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-
-            connection.Close();
-            komunikat_dodania m = new komunikat_dodania();
-            m.Show();
-            this.Hide();
-            
-
-                
-            
-            
-            
+            }            
         }
-
-
-  
 
         private void powierzchnia_zabieg_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -151,11 +140,6 @@ namespace projekt_beta
                 e.Handled = true;
             }
             */
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void powrot_zabieg_Click(object sender, EventArgs e)
