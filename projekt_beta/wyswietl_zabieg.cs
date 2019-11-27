@@ -39,7 +39,7 @@ namespace projekt_beta
         private DataTable GetEmployeesList()
         {
             DataTable dtEmployees = new DataTable(); //server=sql7.freemysqlhosting.net;user id=sql7313253;persistsecurityinfo=True;database=sql7313253
-            string connString = "Server=sql7.freemysqlhosting.net;Database=sql7313253; Uid=sql7313253;Pwd=QtM4himqbd";
+            string connString = ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString;
 
             using (MySqlConnection con = new MySqlConnection(connString))
             {

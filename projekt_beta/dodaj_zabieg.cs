@@ -4,6 +4,7 @@
 using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace projekt_beta
 {
@@ -71,8 +72,8 @@ namespace projekt_beta
              connect.Open();
              cmd.ExecuteNonQuery();
              */
-      
-            string connString = "Server=sql7.freemysqlhosting.net;Database=sql7313253; Uid=sql7313253;Pwd=QtM4himqbd";
+
+            string connString = ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString;
             MySqlConnection connection = new MySqlConnection(connString);
             string insertQuery = "INSERT INTO Ewidencja(id_uzytkownicy,data_zabiegu,roslina,powierzchnia,nazwa,dawka,jednostka,przyczyna_stosowania,uwaga) VALUES(" +
                 "'"+Program.EmployeeName+

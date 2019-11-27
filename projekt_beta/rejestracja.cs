@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace projekt_beta
 {
@@ -52,7 +53,7 @@ namespace projekt_beta
                     }
                     else
                     {
-                        string connString = "Server=sql7.freemysqlhosting.net;Database=sql7313253; Uid=sql7313253;Pwd=QtM4himqbd";
+                        string connString = ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString;
                         MySqlConnection connection = new MySqlConnection(connString);
                         string insertQuery = "SELECT id FROM uzytkownicy WHERE BINARY login= '" + login_text_rejestracja.Text + "';";
                         MySqlConnection conDataBase = new MySqlConnection(connString);

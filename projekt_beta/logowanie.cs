@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Configuration;
 
 namespace projekt_beta
 {
@@ -27,7 +28,7 @@ namespace projekt_beta
         private void zaloguj_button_Click(object sender, EventArgs e)
         {
 
-            string connString = "Server=sql7.freemysqlhosting.net;Database=sql7313253; Uid=sql7313253;Pwd=QtM4himqbd";
+            string connString = ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString;
             MySqlConnection connection = new MySqlConnection(connString);
             string insertQuery = "SELECT id FROM uzytkownicy WHERE BINARY login= '" + login_text.Text  + "' AND BINARY haslo= '" + password_text.Text + "';";
                 
@@ -69,6 +70,7 @@ namespace projekt_beta
 
 
         }
+        
 
         private void zalozkonto_button_Click(object sender, EventArgs e)
         {

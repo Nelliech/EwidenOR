@@ -33,25 +33,29 @@
             this.zaloguj_button = new System.Windows.Forms.Button();
             this.zalozkonto_button = new System.Windows.Forms.Button();
             this.wiadomosc_logowania = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // login_text
             // 
-            this.login_text.Location = new System.Drawing.Point(282, 41);
+            this.login_text.Location = new System.Drawing.Point(48, 19);
             this.login_text.Name = "login_text";
-            this.login_text.Size = new System.Drawing.Size(149, 20);
+            this.login_text.Size = new System.Drawing.Size(277, 20);
             this.login_text.TabIndex = 0;
             // 
             // password_text
             // 
-            this.password_text.Location = new System.Drawing.Point(282, 79);
+            this.password_text.Location = new System.Drawing.Point(399, 19);
             this.password_text.Name = "password_text";
-            this.password_text.Size = new System.Drawing.Size(149, 20);
+            this.password_text.Size = new System.Drawing.Size(296, 20);
             this.password_text.TabIndex = 1;
             // 
             // zaloguj_button
             // 
-            this.zaloguj_button.Location = new System.Drawing.Point(375, 118);
+            this.zaloguj_button.Location = new System.Drawing.Point(608, 49);
             this.zaloguj_button.Name = "zaloguj_button";
             this.zaloguj_button.Size = new System.Drawing.Size(87, 31);
             this.zaloguj_button.TabIndex = 2;
@@ -61,7 +65,7 @@
             // 
             // zalozkonto_button
             // 
-            this.zalozkonto_button.Location = new System.Drawing.Point(251, 118);
+            this.zalozkonto_button.Location = new System.Drawing.Point(608, 86);
             this.zalozkonto_button.Name = "zalozkonto_button";
             this.zalozkonto_button.Size = new System.Drawing.Size(87, 31);
             this.zalozkonto_button.TabIndex = 3;
@@ -73,26 +77,56 @@
             // 
             this.wiadomosc_logowania.AutoSize = true;
             this.wiadomosc_logowania.ForeColor = System.Drawing.Color.Red;
-            this.wiadomosc_logowania.Location = new System.Drawing.Point(306, 102);
+            this.wiadomosc_logowania.Location = new System.Drawing.Point(298, 49);
             this.wiadomosc_logowania.Name = "wiadomosc_logowania";
             this.wiadomosc_logowania.Size = new System.Drawing.Size(100, 13);
             this.wiadomosc_logowania.TabIndex = 4;
             this.wiadomosc_logowania.Text = "Niepoprawne dane!";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.wiadomosc_logowania);
+            this.groupBox1.Controls.Add(this.login_text);
+            this.groupBox1.Controls.Add(this.zalozkonto_button);
+            this.groupBox1.Controls.Add(this.password_text);
+            this.groupBox1.Controls.Add(this.zaloguj_button);
+            this.groupBox1.Location = new System.Drawing.Point(0, 516);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(708, 121);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Login:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(359, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Hasło:";
+            // 
             // logowanie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 284);
-            this.Controls.Add(this.wiadomosc_logowania);
-            this.Controls.Add(this.zalozkonto_button);
-            this.Controls.Add(this.zaloguj_button);
-            this.Controls.Add(this.password_text);
-            this.Controls.Add(this.login_text);
+            this.ClientSize = new System.Drawing.Size(707, 636);
+            this.Controls.Add(this.groupBox1);
             this.Name = "logowanie";
             this.Text = "logowanie";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -103,5 +137,8 @@
         private System.Windows.Forms.Button zaloguj_button;
         private System.Windows.Forms.Button zalozkonto_button;
         private System.Windows.Forms.Label wiadomosc_logowania;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
