@@ -23,13 +23,7 @@ namespace projekt_beta
         public wyswietl_zabieg()
         {
             InitializeComponent();
-            /*
-            string sciezka = null;
-            sciezka = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=EwidenOR1.accdb;";
-            string format = Path.GetExtension(sciezka);
-            ImportDanychAccess(sciezka, format, true);
-            */
-           // this.Show();
+ 
           
         }
         private void wyswietl_zabieg_Load(object sender, EventArgs e)
@@ -38,10 +32,11 @@ namespace projekt_beta
         }
         private DataTable GetEmployeesList()
         {
-            DataTable dtEmployees = new DataTable(); //server=sql7.freemysqlhosting.net;user id=sql7313253;persistsecurityinfo=True;database=sql7313253
-            string connString = ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString;
+            DataTable dtEmployees = new DataTable();
+            
+            
 
-            using (MySqlConnection con = new MySqlConnection(connString))
+            using (MySqlConnection con = new MySqlConnection(Program.path))
             {
                 using (MySqlCommand cmd = new MySqlCommand("Select data_zabiegu,roslina,powierzchnia,nazwa,dawka,jednostka,przyczyna_stosowania,uwaga From Ewidencja " +
                     "Where id_uzytkownicy='" + Program.EmployeeName + "'", con))
@@ -53,46 +48,19 @@ namespace projekt_beta
                     dtEmployees.Load(reader);
                 }
 
-            } 
+            }
+            dtEmployees.Columns[0].ColumnName = "Data Zabiegu";
+            dtEmployees.Columns[1].ColumnName = "Nazwa Rośliny";
+            dtEmployees.Columns[2].ColumnName = "Powierzchnia(ha)";
+            dtEmployees.Columns[3].ColumnName = "Nazwa Środka";
+            dtEmployees.Columns[4].ColumnName = "Dawka Środka";
+            dtEmployees.Columns[5].ColumnName = "Jednostka";
+            dtEmployees.Columns[6].ColumnName = "Przyczyna Stosowania";
+            dtEmployees.Columns[7].ColumnName = "Uwagi";
 
-                return dtEmployees;
+            return dtEmployees;
         }
-        /*
-        DataTable ImportTabeleAccess(string ścieżka, string format)
-        {
-            string sciezka = null;
-            sciezka = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=EwidenOR1.accdb;";
-
-            string[] ograniczenia = new string[4]; ograniczenia[3] = "Table";
-            OleDbConnection połączenie = new OleDbConnection(sciezka);
-            połączenie.Open();
-
-            DataTable dt = połączenie.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, ograniczenia);
-            połączenie.Close();
-
-            return dt;
-        }
-
-        void ImportDanychAccess(string ścieżka, string format, bool wyświetl)
-        {
-            string sciezka = null;
-            sciezka = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=EwidenOR1.accdb;";
-
-            OleDbConnection connect = new OleDbConnection(sciezka);
-            connect.Open();
-            DataTable dt = new DataTable();
-            OleDbCommand komenda = new OleDbCommand("SELECT * FROM [Ewidencja]", connect);
-
-            OleDbDataAdapter adapter = new OleDbDataAdapter(komenda);
-            adapter.Fill(dt);
-            if (wyświetl) ArkuszDanych.DataSource = dt;
-
-
-
-            connect.Close();
-
-        }
-        */
+   
 
         private void button1_Click(object sender, EventArgs e)
         {

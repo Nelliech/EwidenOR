@@ -26,7 +26,40 @@ namespace projekt_beta
             label_alert.Hide();
             label_alert_pass.Hide();
             label_alert_login.Hide();
+
         }
+       
+            
+
+            public bool ConnectMySql(string query)
+            {
+               // string path = ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString;
+                MySqlConnection connection = new MySqlConnection(Program.path);
+                MySqlConnection conDataBase = new MySqlConnection(Program.path);
+                MySqlCommand command = new MySqlCommand(query, conDataBase);
+
+                conDataBase.Open();
+                bool x = command.ExecuteScalar() != null;
+                conDataBase.Close();
+                return x;
+
+            }
+            public void ConnectMySql2(string query)
+            {
+               // string path = ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString;
+                MySqlConnection connection = new MySqlConnection(Program.path);
+                MySqlConnection conDataBase = new MySqlConnection(Program.path);
+                MySqlCommand command = new MySqlCommand(query, conDataBase);
+                MySqlDataReader myreader;
+                conDataBase.Open();
+
+                myreader = command.ExecuteReader();
+
+                conDataBase.Close();
+
+
+            }
+       
         //----------------------------------------------------------------------------------------------------------------------------------------------
         private void rejestracja_button_Click(object sender, EventArgs e)
         {
@@ -54,16 +87,11 @@ namespace projekt_beta
                     else
                     {
                         string connString = ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString;
-                        MySqlConnection connection = new MySqlConnection(connString);
                         string insertQuery = "SELECT id FROM uzytkownicy WHERE BINARY login= '" + login_text_rejestracja.Text + "';";
-                        MySqlConnection conDataBase = new MySqlConnection(connString);
-                        MySqlCommand command = new MySqlCommand(insertQuery, conDataBase);
-
-                        conDataBase.Open();
-
+                        bool wiersz = ConnectMySql(insertQuery);
 
                         //MessageBox.Show(login_text_rejestracja.Text);
-                        if (command.ExecuteScalar() != null)// Sprawdzenie czy jest w bazie danych wiersz z takim samym loginem
+                        if (wiersz)// Sprawdzenie czy jest w bazie danych wiersz z takim samym loginem
                         {
                             // Jest taki sam login
 
@@ -73,38 +101,23 @@ namespace projekt_beta
                         }
                         else
                         {
-                            //Nie ma jeszcze takiego loginu utworzonego
-                            conDataBase.Close();
-                            string connString2 = "Server=sql7.freemysqlhosting.net;Database=sql7313253; Uid=sql7313253;Pwd=QtM4himqbd";
-                            MySqlConnection connection2 = new MySqlConnection(connString2);
-                            string insertQuery2 = insertQuery = "INSERT INTO uzytkownicy (imie, nazwisko, login, haslo) VALUES ('" +
+                            //Nie ma jeszcze takiego loginu utworzonego  
+                             insertQuery = "INSERT INTO uzytkownicy (imie, nazwisko, login, haslo) VALUES ('" +
                                  imie_text_rejestracja.Text + "','" +
                                  nazwisko_text_rejestracja.Text + "','" +
                                  login_text_rejestracja.Text + "','" +
                                  pass_text_rejestracja.Text + "')";
-                            MySqlConnection conDataBase2 = new MySqlConnection(connString2);
-                            MySqlCommand command2 = new MySqlCommand(insertQuery2, conDataBase2);
-                            MySqlDataReader myreader;
 
                             try
-                            {
-                                conDataBase2.Open();
+                            {   
+                                ConnectMySql2(insertQuery);
 
-
-
-
-                                myreader = command2.ExecuteReader();
-                                while (myreader.Read())
-                                {
-
-
-                                }
                                 MessageBox.Show("Konto zostało uwtorzone!");
                                 logowanie st = new logowanie();
                                 st.Show();
                                 this.Hide();
 
-                                conDataBase2.Close();
+                                //conDataBase2.Close();
                             }
                             catch (Exception ex)
                             {
