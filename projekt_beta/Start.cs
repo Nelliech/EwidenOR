@@ -51,7 +51,21 @@ namespace projekt_beta
            
 
         }
-       
 
+        private void wylogowanie_button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Zostałeś wylogowany");
+            Program.EmployeeName = "";
+            logowanie wz = new logowanie();
+            wz.Show();
+            this.Hide();
+        }
+
+        private void edytuj_ewidencje_button_Click(object sender, EventArgs e)
+        {
+            edycja st = new edycja();
+            st.Show();
+            this.Hide();
+        }
     }
 }

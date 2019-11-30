@@ -46,7 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.powrot_button = new System.Windows.Forms.Button();
             this.zapisz_button = new System.Windows.Forms.Button();
-            this.edycja_button = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ewidencje_combobox
@@ -56,13 +56,15 @@
             this.ewidencje_combobox.Name = "ewidencje_combobox";
             this.ewidencje_combobox.Size = new System.Drawing.Size(703, 21);
             this.ewidencje_combobox.TabIndex = 0;
+            this.ewidencje_combobox.SelectionChangeCommitted += new System.EventHandler(this.ewidencje_combobox_SelectionChangeCommitted);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(42, 331);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Location = new System.Drawing.Point(42, 332);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.Size = new System.Drawing.Size(47, 15);
             this.label7.TabIndex = 43;
             this.label7.Text = "Uwagi";
             // 
@@ -71,7 +73,7 @@
             this.uwagi_zabieg.Location = new System.Drawing.Point(42, 350);
             this.uwagi_zabieg.Multiline = true;
             this.uwagi_zabieg.Name = "uwagi_zabieg";
-            this.uwagi_zabieg.Size = new System.Drawing.Size(174, 51);
+            this.uwagi_zabieg.Size = new System.Drawing.Size(301, 74);
             this.uwagi_zabieg.TabIndex = 42;
             // 
             // przyczyna_zabieg
@@ -79,15 +81,16 @@
             this.przyczyna_zabieg.Location = new System.Drawing.Point(42, 256);
             this.przyczyna_zabieg.Multiline = true;
             this.przyczyna_zabieg.Name = "przyczyna_zabieg";
-            this.przyczyna_zabieg.Size = new System.Drawing.Size(160, 68);
+            this.przyczyna_zabieg.Size = new System.Drawing.Size(301, 68);
             this.przyczyna_zabieg.TabIndex = 41;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(39, 240);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(42, 240);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 13);
+            this.label6.Size = new System.Drawing.Size(212, 15);
             this.label6.TabIndex = 40;
             this.label6.Text = "Przyczyna zastosowania środka ";
             // 
@@ -98,7 +101,7 @@
             "l/ha",
             "kg/ha",
             "%"});
-            this.dawka_jednostki_zabieg.Location = new System.Drawing.Point(148, 216);
+            this.dawka_jednostki_zabieg.Location = new System.Drawing.Point(289, 215);
             this.dawka_jednostki_zabieg.Name = "dawka_jednostki_zabieg";
             this.dawka_jednostki_zabieg.Size = new System.Drawing.Size(54, 21);
             this.dawka_jednostki_zabieg.TabIndex = 39;
@@ -107,24 +110,26 @@
             // 
             this.dawka_zabieg.Location = new System.Drawing.Point(42, 216);
             this.dawka_zabieg.Name = "dawka_zabieg";
-            this.dawka_zabieg.Size = new System.Drawing.Size(100, 20);
+            this.dawka_zabieg.Size = new System.Drawing.Size(241, 20);
             this.dawka_zabieg.TabIndex = 38;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(42, 200);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(42, 198);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.Size = new System.Drawing.Size(50, 15);
             this.label5.TabIndex = 37;
             this.label5.Text = "Dawka";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.Location = new System.Drawing.Point(42, 164);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(50, 15);
             this.label4.TabIndex = 36;
             this.label4.Text = "Nazwa";
             // 
@@ -132,31 +137,33 @@
             // 
             this.nazwa_zabieg.Location = new System.Drawing.Point(43, 180);
             this.nazwa_zabieg.Name = "nazwa_zabieg";
-            this.nazwa_zabieg.Size = new System.Drawing.Size(100, 20);
+            this.nazwa_zabieg.Size = new System.Drawing.Size(300, 20);
             this.nazwa_zabieg.TabIndex = 35;
             // 
             // powierzchnia_zabieg
             // 
             this.powierzchnia_zabieg.Location = new System.Drawing.Point(42, 143);
             this.powierzchnia_zabieg.Name = "powierzchnia_zabieg";
-            this.powierzchnia_zabieg.Size = new System.Drawing.Size(100, 20);
+            this.powierzchnia_zabieg.Size = new System.Drawing.Size(301, 20);
             this.powierzchnia_zabieg.TabIndex = 34;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 129);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(42, 125);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(206, 13);
+            this.label3.Size = new System.Drawing.Size(301, 15);
             this.label3.TabIndex = 33;
-            this.label3.Text = "Powierzchnia, na której wykonano zabieg ";
+            this.label3.Text = "Powierzchnia, na której wykonano zabieg (ha)";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 90);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(42, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.Size = new System.Drawing.Size(56, 15);
             this.label2.TabIndex = 32;
             this.label2.Text = "Roślina";
             // 
@@ -164,61 +171,65 @@
             // 
             this.roslina_zabieg.Location = new System.Drawing.Point(42, 106);
             this.roslina_zabieg.Name = "roslina_zabieg";
-            this.roslina_zabieg.Size = new System.Drawing.Size(100, 20);
+            this.roslina_zabieg.Size = new System.Drawing.Size(301, 20);
             this.roslina_zabieg.TabIndex = 31;
             // 
             // data_zabieg
             // 
             this.data_zabieg.Location = new System.Drawing.Point(42, 68);
             this.data_zabieg.Name = "data_zabieg";
-            this.data_zabieg.Size = new System.Drawing.Size(204, 20);
+            this.data_zabieg.Size = new System.Drawing.Size(301, 20);
             this.data_zabieg.TabIndex = 30;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 52);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(42, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.Size = new System.Drawing.Size(93, 15);
             this.label1.TabIndex = 29;
             this.label1.Text = "Czas zabiegu";
             // 
             // powrot_button
             // 
-            this.powrot_button.Location = new System.Drawing.Point(687, 401);
+            this.powrot_button.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.powrot_button.Location = new System.Drawing.Point(687, 390);
             this.powrot_button.Name = "powrot_button";
-            this.powrot_button.Size = new System.Drawing.Size(75, 23);
+            this.powrot_button.Size = new System.Drawing.Size(97, 34);
             this.powrot_button.TabIndex = 44;
             this.powrot_button.Text = "Powrót";
-            this.powrot_button.UseVisualStyleBackColor = true;
+            this.powrot_button.UseVisualStyleBackColor = false;
             this.powrot_button.Click += new System.EventHandler(this.powrot_button_Click);
             // 
             // zapisz_button
             // 
-            this.zapisz_button.Location = new System.Drawing.Point(606, 401);
+            this.zapisz_button.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.zapisz_button.Location = new System.Drawing.Point(584, 390);
             this.zapisz_button.Name = "zapisz_button";
-            this.zapisz_button.Size = new System.Drawing.Size(75, 23);
+            this.zapisz_button.Size = new System.Drawing.Size(97, 34);
             this.zapisz_button.TabIndex = 45;
             this.zapisz_button.Text = "Zapisz";
-            this.zapisz_button.UseVisualStyleBackColor = true;
+            this.zapisz_button.UseVisualStyleBackColor = false;
             this.zapisz_button.Click += new System.EventHandler(this.zapisz_button_Click);
             // 
-            // edycja_button
+            // label8
             // 
-            this.edycja_button.Location = new System.Drawing.Point(670, 68);
-            this.edycja_button.Name = "edycja_button";
-            this.edycja_button.Size = new System.Drawing.Size(75, 23);
-            this.edycja_button.TabIndex = 46;
-            this.edycja_button.Text = "Edytuj";
-            this.edycja_button.UseVisualStyleBackColor = true;
-            this.edycja_button.Click += new System.EventHandler(this.edycja_button_Click);
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label8.Location = new System.Drawing.Point(42, 5);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 18);
+            this.label8.TabIndex = 46;
+            this.label8.Text = "Ewidencje";
             // 
             // edycja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.edycja_button);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.zapisz_button);
             this.Controls.Add(this.powrot_button);
             this.Controls.Add(this.label7);
@@ -237,8 +248,11 @@
             this.Controls.Add(this.data_zabieg);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ewidencje_combobox);
+            this.MaximizeBox = false;
             this.Name = "edycja";
-            this.Text = "edycja";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "EwidenOR";
             this.Load += new System.EventHandler(this.edycja_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -265,6 +279,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button powrot_button;
         private System.Windows.Forms.Button zapisz_button;
-        private System.Windows.Forms.Button edycja_button;
+        private System.Windows.Forms.Label label8;
     }
 }

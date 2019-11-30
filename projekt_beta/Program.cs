@@ -20,7 +20,7 @@ namespace projekt_beta
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new wyswietl_zabieg());
+            Application.Run(new logowanie());
             
         }
     }

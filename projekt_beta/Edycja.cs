@@ -32,7 +32,7 @@ namespace projekt_beta
                 }
 
                 MessageBox.Show("Wiersz został zaktualizowany");
-
+                
             }
             catch (Exception ex)
             {
@@ -149,13 +149,22 @@ namespace projekt_beta
                 + "',nazwa='" + nazwa_zabieg.Text +"',dawka='" + dawka_zabieg.Text + "',jednostka='" + this.dawka_jednostki_zabieg.GetItemText(this.dawka_jednostki_zabieg.SelectedItem) +
                 "',przyczyna_stosowania='" +przyczyna_zabieg.Text + "',uwaga='" + uwagi_zabieg.Text + "' Where id='" + index + "';";
             ConnectMysql_update(insertQuery);
+
         }
 
         private void powrot_button_Click(object sender, EventArgs e)
         {
-            wyswietl_zabieg st = new wyswietl_zabieg();
+            Start st = new Start();
             st.Show();
             this.Hide();
+        }
+
+        private void ewidencje_combobox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            string wiersze = this.ewidencje_combobox.GetItemText(this.ewidencje_combobox.SelectedItem);
+            string index = wiersze.Substring(0, wiersze.LastIndexOf(">"));
+            string insertQuery = "SELECT id, data_zabiegu, roslina, powierzchnia, nazwa, dawka, jednostka, przyczyna_stosowania, uwaga FROM Ewidencja WHERE id= '" + index + "';";
+            Edycja(insertQuery);
         }
     }
 }

@@ -69,7 +69,33 @@ namespace projekt_beta
         {
             rejestracja st = new rejestracja();
             st.Show();
-            this.Hide();
+            
+
+        }
+
+        private void logowanie_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_text_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            wiadomosc_logowania.Hide();
+           
+        }
+
+        private void login_text_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            wiadomosc_logowania.Hide();
+        }
+
+        private void logowanie_KeyDown(object sender, KeyEventArgs e)
+        {
 
         }
     }
