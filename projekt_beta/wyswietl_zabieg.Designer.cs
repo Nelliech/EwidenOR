@@ -31,6 +31,7 @@
             this.ArkuszDanych = new System.Windows.Forms.DataGridView();
             this.powrot_wyswietl = new System.Windows.Forms.Button();
             this.druk = new System.Windows.Forms.Button();
+            this.edytuj_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ArkuszDanych)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             // 
             // druk
             // 
-            this.druk.Location = new System.Drawing.Point(430, 459);
+            this.druk.Location = new System.Drawing.Point(424, 459);
             this.druk.Name = "druk";
             this.druk.Size = new System.Drawing.Size(148, 45);
             this.druk.TabIndex = 3;
@@ -65,11 +66,22 @@
             this.druk.UseVisualStyleBackColor = true;
             this.druk.Click += new System.EventHandler(this.druk_Click);
             // 
+            // edytuj_button
+            // 
+            this.edytuj_button.Location = new System.Drawing.Point(12, 459);
+            this.edytuj_button.Name = "edytuj_button";
+            this.edytuj_button.Size = new System.Drawing.Size(148, 45);
+            this.edytuj_button.TabIndex = 4;
+            this.edytuj_button.Text = "Edytuj ";
+            this.edytuj_button.UseVisualStyleBackColor = true;
+            this.edytuj_button.Click += new System.EventHandler(this.edytuj_button_Click);
+            // 
             // wyswietl_zabieg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 509);
+            this.Controls.Add(this.edytuj_button);
             this.Controls.Add(this.druk);
             this.Controls.Add(this.powrot_wyswietl);
             this.Controls.Add(this.ArkuszDanych);
@@ -85,5 +97,6 @@
         private System.Windows.Forms.DataGridView ArkuszDanych;
         private System.Windows.Forms.Button powrot_wyswietl;
         private System.Windows.Forms.Button druk;
+        private System.Windows.Forms.Button edytuj_button;
     }
 }

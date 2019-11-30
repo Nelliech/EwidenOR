@@ -1,19 +1,11 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-//using System.Data.OleDb;
-//using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data;
 using MySql.Data.MySqlClient;
-using System.Configuration;
+
 
 
 namespace projekt_beta
@@ -132,6 +124,13 @@ namespace projekt_beta
         {
             exportgridtopdf(ArkuszDanych, "Ewidencja");
 
+        }
+
+        private void edytuj_button_Click(object sender, EventArgs e)
+        {
+            edycja st = new edycja();
+            st.Show();
+            this.Hide();
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }

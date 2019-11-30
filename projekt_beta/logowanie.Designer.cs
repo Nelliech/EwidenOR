@@ -34,30 +34,33 @@
             this.zalozkonto_button = new System.Windows.Forms.Button();
             this.wiadomosc_logowania = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // login_text
             // 
-            this.login_text.Location = new System.Drawing.Point(48, 19);
+            this.login_text.Location = new System.Drawing.Point(56, 24);
+            this.login_text.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.login_text.Name = "login_text";
-            this.login_text.Size = new System.Drawing.Size(277, 20);
+            this.login_text.Size = new System.Drawing.Size(322, 23);
             this.login_text.TabIndex = 0;
             // 
             // password_text
             // 
-            this.password_text.Location = new System.Drawing.Point(399, 19);
+            this.password_text.Location = new System.Drawing.Point(465, 24);
+            this.password_text.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.password_text.Name = "password_text";
-            this.password_text.Size = new System.Drawing.Size(296, 20);
+            this.password_text.Size = new System.Drawing.Size(345, 23);
             this.password_text.TabIndex = 1;
             // 
             // zaloguj_button
             // 
-            this.zaloguj_button.Location = new System.Drawing.Point(608, 49);
+            this.zaloguj_button.Location = new System.Drawing.Point(709, 59);
+            this.zaloguj_button.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.zaloguj_button.Name = "zaloguj_button";
-            this.zaloguj_button.Size = new System.Drawing.Size(87, 31);
+            this.zaloguj_button.Size = new System.Drawing.Size(101, 38);
             this.zaloguj_button.TabIndex = 2;
             this.zaloguj_button.Text = "Zaloguj się ";
             this.zaloguj_button.UseVisualStyleBackColor = true;
@@ -65,9 +68,10 @@
             // 
             // zalozkonto_button
             // 
-            this.zalozkonto_button.Location = new System.Drawing.Point(608, 86);
+            this.zalozkonto_button.Location = new System.Drawing.Point(709, 106);
+            this.zalozkonto_button.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.zalozkonto_button.Name = "zalozkonto_button";
-            this.zalozkonto_button.Size = new System.Drawing.Size(87, 31);
+            this.zalozkonto_button.Size = new System.Drawing.Size(101, 38);
             this.zalozkonto_button.TabIndex = 3;
             this.zalozkonto_button.Text = "Załóż Konto";
             this.zalozkonto_button.UseVisualStyleBackColor = true;
@@ -77,9 +81,9 @@
             // 
             this.wiadomosc_logowania.AutoSize = true;
             this.wiadomosc_logowania.ForeColor = System.Drawing.Color.Red;
-            this.wiadomosc_logowania.Location = new System.Drawing.Point(298, 49);
+            this.wiadomosc_logowania.Location = new System.Drawing.Point(348, 59);
             this.wiadomosc_logowania.Name = "wiadomosc_logowania";
-            this.wiadomosc_logowania.Size = new System.Drawing.Size(100, 13);
+            this.wiadomosc_logowania.Size = new System.Drawing.Size(111, 16);
             this.wiadomosc_logowania.TabIndex = 4;
             this.wiadomosc_logowania.Text = "Niepoprawne dane!";
             // 
@@ -92,38 +96,45 @@
             this.groupBox1.Controls.Add(this.zalozkonto_button);
             this.groupBox1.Controls.Add(this.password_text);
             this.groupBox1.Controls.Add(this.zaloguj_button);
-            this.groupBox1.Location = new System.Drawing.Point(0, 516);
+            this.groupBox1.Location = new System.Drawing.Point(2, 496);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(708, 121);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.groupBox1.Size = new System.Drawing.Size(826, 162);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Login:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(359, 16);
+            this.label2.Location = new System.Drawing.Point(419, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(41, 16);
             this.label2.TabIndex = 6;
             this.label2.Text = "Hasło:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 16);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Login:";
+            // 
             // logowanie
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 636);
+            this.ClientSize = new System.Drawing.Size(825, 658);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("Microsoft PhagsPa", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.MaximizeBox = false;
             this.Name = "logowanie";
-            this.Text = "logowanie";
+            this.ShowIcon = false;
+            this.Text = "EwidenOR";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

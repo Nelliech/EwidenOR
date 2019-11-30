@@ -9,7 +9,7 @@ namespace projekt_beta
 {
     static class Program
     {
-        public static string EmployeeName="";
+        public static string EmployeeName="1";
         public static string path = ConfigurationManager.ConnectionStrings["MySQL"].ConnectionString;
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
@@ -20,7 +20,7 @@ namespace projekt_beta
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new logowanie());
+            Application.Run(new wyswietl_zabieg());
             
         }
     }

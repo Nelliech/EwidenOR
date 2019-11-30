@@ -1,8 +1,5 @@
 ﻿using System;
-//using System.Data;
-//using System.Data.OleDb;
 using System.Windows.Forms;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Configuration;
 

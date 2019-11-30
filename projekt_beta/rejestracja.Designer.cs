@@ -130,7 +130,7 @@
             // 
             this.rejestracja_button.Location = new System.Drawing.Point(314, 234);
             this.rejestracja_button.Name = "rejestracja_button";
-            this.rejestracja_button.Size = new System.Drawing.Size(75, 23);
+            this.rejestracja_button.Size = new System.Drawing.Size(100, 33);
             this.rejestracja_button.TabIndex = 10;
             this.rejestracja_button.Text = "Załóż Konto";
             this.rejestracja_button.UseVisualStyleBackColor = true;
