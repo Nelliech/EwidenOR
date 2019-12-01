@@ -17,7 +17,14 @@ namespace projekt_beta
         public Start()
         {
             InitializeComponent();
-           
+            if (Program.EmployeeName == "1")
+            {
+                uzytkownicy_button.Show();
+            }
+            else
+            {
+                uzytkownicy_button.Hide();
+            }
             
         }
 
@@ -64,6 +71,13 @@ namespace projekt_beta
         private void edytuj_ewidencje_button_Click(object sender, EventArgs e)
         {
             edycja st = new edycja();
+            st.Show();
+            this.Hide();
+        }
+
+        private void uzytkownicy_button_Click(object sender, EventArgs e)
+        {
+            wyswietl_uzytkownikow st = new wyswietl_uzytkownikow();
             st.Show();
             this.Hide();
         }

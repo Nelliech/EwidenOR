@@ -98,5 +98,11 @@ namespace projekt_beta
         {
 
         }
+
+        private void password_text_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) zaloguj_button.PerformClick();
+
+        }
     }
 }

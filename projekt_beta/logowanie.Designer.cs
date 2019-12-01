@@ -58,6 +58,7 @@
             this.password_text.Name = "password_text";
             this.password_text.Size = new System.Drawing.Size(345, 23);
             this.password_text.TabIndex = 1;
+            this.password_text.KeyDown += new System.Windows.Forms.KeyEventHandler(this.password_text_KeyDown);
             this.password_text.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.password_text_KeyPress);
             // 
             // zaloguj_button

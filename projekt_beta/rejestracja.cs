@@ -105,8 +105,7 @@ namespace projekt_beta
                                 ConnectMySql2(insertQuery);
 
                                 MessageBox.Show("Konto zostało uwtorzone!");
-                                logowanie st = new logowanie();
-                                st.Show();
+                                
                                 this.Hide();
 
                                 //conDataBase2.Close();

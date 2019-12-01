@@ -113,6 +113,12 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
+    <Compile Include="wyswietl_uzytkownikow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wyswietl_uzytkownikow.Designer.cs">
+      <DependentUpon>wyswietl_uzytkownikow.cs</DependentUpon>
+    </Compile>
     <Compile Include="wyswietl_zabieg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Start.resx">
       <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wyswietl_uzytkownikow.resx">
+      <DependentUpon>wyswietl_uzytkownikow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="wyswietl_zabieg.resx">
       <DependentUpon>wyswietl_zabieg.cs</DependentUpon>

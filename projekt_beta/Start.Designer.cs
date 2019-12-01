@@ -33,6 +33,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.wylogowanie_button = new System.Windows.Forms.Button();
             this.edytuj_ewidencje_button = new System.Windows.Forms.Button();
+            this.uzytkownicy_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // historia_ewidencji
@@ -83,6 +84,18 @@
             this.edytuj_ewidencje_button.UseVisualStyleBackColor = false;
             this.edytuj_ewidencje_button.Click += new System.EventHandler(this.edytuj_ewidencje_button_Click);
             // 
+            // uzytkownicy_button
+            // 
+            this.uzytkownicy_button.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.uzytkownicy_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.uzytkownicy_button.Location = new System.Drawing.Point(288, 280);
+            this.uzytkownicy_button.Name = "uzytkownicy_button";
+            this.uzytkownicy_button.Size = new System.Drawing.Size(252, 75);
+            this.uzytkownicy_button.TabIndex = 4;
+            this.uzytkownicy_button.Text = "Pokaż użytkowników";
+            this.uzytkownicy_button.UseVisualStyleBackColor = false;
+            this.uzytkownicy_button.Click += new System.EventHandler(this.uzytkownicy_button_Click);
+            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -90,6 +103,7 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(825, 569);
+            this.Controls.Add(this.uzytkownicy_button);
             this.Controls.Add(this.edytuj_ewidencje_button);
             this.Controls.Add(this.wylogowanie_button);
             this.Controls.Add(this.dodaj_ewidencje);
@@ -111,5 +125,6 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button wylogowanie_button;
         private System.Windows.Forms.Button edytuj_ewidencje_button;
+        private System.Windows.Forms.Button uzytkownicy_button;
     }
 }

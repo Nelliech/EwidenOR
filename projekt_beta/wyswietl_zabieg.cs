@@ -30,25 +30,56 @@ namespace projekt_beta
 
             using (MySqlConnection con = new MySqlConnection(Program.path))
             {
-                using (MySqlCommand cmd = new MySqlCommand("Select data_zabiegu,roslina,powierzchnia,nazwa,dawka,jednostka,przyczyna_stosowania,uwaga From Ewidencja " +
-                    "Where id_uzytkownicy='" + Program.EmployeeName + "'", con))
+                
+                if (Program.EmployeeName == "1") // Jeśli jesteś zalogowany jakoś administrator widzisz wszystko 
                 {
-                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand("SELECT login, Ewidencja.data_zabiegu, Ewidencja.roslina, Ewidencja.powierzchnia, Ewidencja.nazwa, Ewidencja.dawka, " +
+                        "Ewidencja.jednostka, Ewidencja.przyczyna_stosowania, Ewidencja.uwaga FROM uzytkownicy INNER JOIN Ewidencja ON uzytkownicy.id=Ewidencja.id_uzytkownicy ;", con))
+                    {
+                        con.Open();
 
-                    MySqlDataReader reader = cmd.ExecuteReader();
+                        MySqlDataReader reader = cmd.ExecuteReader();
 
-                    dtEmployees.Load(reader);
+                        dtEmployees.Load(reader);
+                        dtEmployees.Columns[0].ColumnName = "Login";
+                        dtEmployees.Columns[1].ColumnName = "Data Zabiegu";
+                        dtEmployees.Columns[2].ColumnName = "Nazwa Rośliny";
+                        dtEmployees.Columns[3].ColumnName = "Powierzchnia(ha)";
+                        dtEmployees.Columns[4].ColumnName = "Nazwa Środka";
+                        dtEmployees.Columns[5].ColumnName = "Dawka Środka";
+                        dtEmployees.Columns[6].ColumnName = "Jednostka";
+                        dtEmployees.Columns[7].ColumnName = "Przyczyna Stosowania";
+                        dtEmployees.Columns[8].ColumnName = "Uwagi";
+                    }
+
+                }
+                else
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("Select data_zabiegu,roslina,powierzchnia,nazwa,dawka,jednostka,przyczyna_stosowania,uwaga From Ewidencja " +
+                         "Where id_uzytkownicy='" + Program.EmployeeName + "'", con))
+                    {
+                        con.Open();
+
+                        MySqlDataReader reader = cmd.ExecuteReader();
+
+                        dtEmployees.Load(reader);
+                        dtEmployees.Columns[0].ColumnName = "Data Zabiegu";
+                        dtEmployees.Columns[1].ColumnName = "Nazwa Rośliny";
+                        dtEmployees.Columns[2].ColumnName = "Powierzchnia(ha)";
+                        dtEmployees.Columns[3].ColumnName = "Nazwa Środka";
+                        dtEmployees.Columns[4].ColumnName = "Dawka Środka";
+                        dtEmployees.Columns[5].ColumnName = "Jednostka";
+                        dtEmployees.Columns[6].ColumnName = "Przyczyna Stosowania";
+                        dtEmployees.Columns[7].ColumnName = "Uwagi";
+
+                    }
                 }
 
+
+               
+
             }
-            dtEmployees.Columns[0].ColumnName = "Data Zabiegu";
-            dtEmployees.Columns[1].ColumnName = "Nazwa Rośliny";
-            dtEmployees.Columns[2].ColumnName = "Powierzchnia(ha)";
-            dtEmployees.Columns[3].ColumnName = "Nazwa Środka";
-            dtEmployees.Columns[4].ColumnName = "Dawka Środka";
-            dtEmployees.Columns[5].ColumnName = "Jednostka";
-            dtEmployees.Columns[6].ColumnName = "Przyczyna Stosowania";
-            dtEmployees.Columns[7].ColumnName = "Uwagi";
+         
 
             return dtEmployees;
         }
